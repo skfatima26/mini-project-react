@@ -38,6 +38,7 @@ jobs:
           method: POST
           customHeaders: '{"Authorization": "Bearer ${{ secrets.RENDER_API_KEY }}"}'
           data: '{}'
+          timeout: 30000
 
       - name: Check Render Deploy Response
         if: failure()
